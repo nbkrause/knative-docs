@@ -21,16 +21,17 @@ clusters.
 Knative depends on an Ingress/Gateway which is capable of routing requests to
 Knative Services.
 
-Currently, two options exist which provide this functionality:
-[Istio](https://istio.io/), the Envoy-based Service Mesh, and
-[Gloo](https://gloo.solo.io/), the Envoy-based API Gateway.
+Currently, three options exist which provide this functionality:
+[Ambassador](https://www.getambassador.io/), an Envoy-based API Gateway,
+[Istio](https://istio.io/), an Envoy-based Service Mesh, and
+[Gloo](https://gloo.solo.io), an Envoy-based API Gateway.
 
-## Installing Knative with Gloo
+## Installing Knative with Ambassador
 
-[Install with Gloo](./Knative-with-Gloo.md): Gloo functions as a lightweight
-gateway for Knative. Choose this option if you don't require service mesh in
-your cluster and want a lighter-weight alternative to Istio. Note that _the
-Knative Eventing component_ is not supported by Gloo at this time.
+[Installing with Ambassador](./Knative-with-Ambassador.md) gives us an
+alternative to installing a service mesh for routing to applications 
+with the Knative Serving component. Note that Istio is required for the 
+Knative Eventing component.
 
 ## Installing Knative with Istio
 
@@ -102,6 +103,13 @@ Follow this guide to install and set up the available observability plugins on a
 Knative cluster.
 
 - [Monitoring, Logging and Tracing Installation](../serving/installing-logging-metrics-traces.md)
+
+## Installing Knative with Gloo
+
+[Install with Gloo](./Knative-with-Gloo.md): Gloo functions as a lightweight
+gateway for Knative. Choose this option if you don't require service mesh in
+your cluster and want a lighter-weight alternative to Istio. Note that _the
+Knative Eventing component_ is not supported by Gloo at this time.
 
 ## Deploying an app
 
